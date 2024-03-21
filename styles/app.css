@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+#conteneur-modale {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    overflow: hidden;
+}
+
+.modale {
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+    width: 80%;
+    height: calc(100% - 100px);
+    min-height: 300px;
+    left: 10%;
+    top: 50px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.modale header {
+    height: 50px;
+    border-bottom: 1px solid #999;
+}
+
+.modale header h2 {
+    margin: 0;
+}
+
+.corps-modale {
+    height: calc(100% - 130px);
+}
+
+.modale footer {
+    border-top: 1px solid #999;
+    padding-top: 15px;
+    height: 80px;
+    text-align: right;
+}
+
+.modale button {
+    padding: 15px;
+    display: inline-block;
+    background-color: #337ab7;
+    color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.modale button:hover {
+    background-color: #5bc0de;
+}
+
+.modale .bouton-x {
+    float: right;
+}
+
+.modale .bouton-x:hover {
+    color: #777;
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-height: 400px), screen and (max-width: 640px) {
+    .modale {
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
